@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Fit Gym</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">IRON <span>FIT</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Transform Your Body with <span class="highlight">Iron Fit Gym</span></h1>
+            <p>Join the best fitness center today</p>
+            <a href="#register" class="btn btn-primary">Join Now</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section fade-in">
+        <div class="container">
+            <h2 class="section-title">About <span>Us</span></h2>
+            <p class="section-subtitle">We are a community of dedicated trainers and athletes.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Strength Training</h3>
+                    <p>Top-notch free weights and machines for building muscle.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Cardio</h3>
+                    <p>State-of-the-art treadmills and bikes to keep your heart healthy.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-user-ninja"></i>
+                    <h3>Expert Trainers</h3>
+                    <p>Certified professionals to guide you to reach your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="plans section fade-in bg-dark">
+        <div class="container">
+            <h2 class="section-title">Membership <span>Plans</span></h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Basic</h3>
+                    <div class="price">₹999<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Basic Equipment</li>
+                        <li><i class="fas fa-check"></i> Non-Peak Access</li>
+                        <li><i class="fas fa-times"></i> Personal Trainer</li>
+                    </ul>
+                    <a href="#register" class="btn btn-outline" style="margin-top: 20px;">Select Plan</a>
+                </div>
+                <div class="plan-card popular">
+                    <div class="badge">Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">₹1999<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 24/7 Gym Access</li>
+                        <li><i class="fas fa-check"></i> All Equipment Usage</li>
+                        <li><i class="fas fa-times"></i> Personal Trainer</li>
+                    </ul>
+                    <a href="#register" class="btn btn-primary" style="margin-top: 20px;">Select Standard</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Premium</h3>
+                    <div class="price">₹2999<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 24/7 Access</li>
+                        <li><i class="fas fa-check"></i> Group Classes</li>
+                        <li><i class="fas fa-check"></i> Personal Trainer</li>
+                    </ul>
+                    <a href="#register" class="btn btn-outline" style="margin-top: 20px;">Select Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule section fade-in">
+        <div class="container">
+            <h2 class="section-title">Gym <span>Timing</span></h2>
+            <div class="timing-card">
+                <div class="timing-item">
+                    <h4>Monday – Saturday</h4>
+                    <p>6:00 AM – 10:00 PM</p>
+                </div>
+                <div class="timing-item">
+                    <h4>Sunday</h4>
+                    <p>8:00 AM – 2:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="register section fade-in bg-dark">
+        <div class="container">
+            <h2 class="section-title">Join <span>Now</span></h2>
+            <div class="register-grid">
+                <!-- Registration Form -->
+                <form id="regForm" class="reg-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" required placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" required placeholder="175">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" required placeholder="70">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal">Fitness Goal</label>
+                        <select id="goal" required>
+                            <option value="">Select Goal</option>
+                            <option value="Weight Loss">Weight Loss</option>
+                            <option value="Weight Gain">Weight Gain</option>
+                            <option value="Maintain">Maintain</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+                    <p id="form-msg" class="form-msg"></p>
+                </form>
+
+                <!-- BMI & Diet Result -->
+                <div class="result-panel" id="result-panel">
+                    <h3>Your Assessment <i class="fas fa-clipboard-check"></i></h3>
+                    <div id="result-content">
+                        <p class="text-muted" style="margin-top: 20px;">Fill out the form to see your BMI calculation and a tailored Diet Plan recommendation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Table to display registrations -->
+            <div class="recent-registrations" id="recent-registrations" style="display: none;">
+                <h3>Your Registration Detail</h3>
+                <div class="table-responsive">
+                    <table id="reg-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Goal</th>
+                                <th>BMI</th>
+                                <th>Diet Protocol</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reg-table-body">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section fade-in">
+        <div class="container">
+            <h2 class="section-title">Contact <span>Us</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4><p>+91 8874056789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4><p>info@ironfitgym.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4><p>Defence Colony, Jajmau,<br>Kanpur, Uttar Pradesh 208010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Iron Fit Gym. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
